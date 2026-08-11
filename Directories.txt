@@ -1,0 +1,9 @@
+### Below are the list of Directory Pages that are to be added in the website:
+** Landing Page
+1. Challenges Pages (main challenges)
+2. About Page (Creator's Info)
+3. What is CTF? (Tells the users about CTF)
+4. Instructions Page
+5. Resources
+6. Feedback
+7. 
