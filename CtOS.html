@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ctOS | Central Operating System // Breach Detected</title>
+    <style>
+        /* Base styles and variables */
+        :root {
+            --ctos-blue: #00d2ff;
+            --ctos-red: #ff0055;
+            --ctos-bg: #05070a;
+            --ctos-gray: #0f172a;
+            --ctos-text: #e2e8f0;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--ctos-bg);
+            color: var(--ctos-text);
+            font-family: 'Share Tech Mono', monospace;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Scanline Overlay Effect */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 9999;
+            background-size: 100% 4px, 6px 100%;
+            pointer-events: none;
+        }
+
+        /* Glitch Animation */
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+
+        .glitch-text:hover {
+            animation: glitch 0.3s linear infinite;
+            color: var(--ctos-red);
+            text-shadow: 2px 2px var(--ctos-blue);
+        }
+    </style>
+</head>
+<body style="padding: 20px;">
+
+    <!-- Top Navigation Header -->
+    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--ctos-blue); padding-bottom: 15px; margin-bottom: 30px; box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);">
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <!-- ctOS Logo Representation -->
+            <div style="width: 30px; height: 30px; border: 3px solid var(--ctos-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative;">
+                <div style="width: 10px; height: 10px; background-color: var(--ctos-red); border-radius: 50%;"></div>
+                <div style="position: absolute; width: 40px; height: 2px; background-color: var(--ctos-blue); transform: rotate(45deg);"></div>
+            </div>
+            <div>
+                <h1 class="glitch-text" style="font-size: 24px; letter-spacing: 2px; color: var(--ctos-blue); cursor: pointer;">ctOS_v2.01</h1>
+                <p style="font-size: 11px; color: #64748b;">SECURE NETWORK ARCHITECTURE // CHICAGO</p>
+            </div>
+        </div>
+        <nav style="display: flex; gap: 20px;">
+            <a href="#" style="color: var(--ctos-text); text-decoration: none; font-size: 14px; padding: 5px 10px; border: 1px solid transparent;" onmouseover="this.style.borderColor=var(--ctos-blue)" onmouseout="this.style.borderColor='transparent'">[ SYSTEM_STATUS ]</a>
+            <a href="#" style="color: var(--ctos-text); text-decoration: none; font-size: 14px; padding: 5px 10px; border: 1px solid transparent;" onmouseover="this.style.borderColor=var(--ctos-blue)" onmouseout="this.style.borderColor='transparent'">[ NODES ]</a>
+            <a href="#" style="color: var(--ctos-red); text-decoration: none; font-size: 14px; padding: 5px 10px; border: 1px solid var(--ctos-red); background: rgba(255,0,85,0.1);" class="glitch-text">[ DISCONNECT ]</a>
+        </nav>
+    </header>
+
+    <!-- Main Grid Layout -->
+    <main style="display: grid; grid-template-columns: 1fr 350px; gap: 30px; max-width: 1400px; margin: 0 auto;">
+        
+        <!-- Left Side: Interactive Terminal & Manifest -->
+        <section>
+            <!-- Hero Banner Warning -->
+            <div style="background: rgba(255, 0, 85, 0.05); border-left: 4px solid var(--ctos-red); padding: 20px; margin-bottom: 30px; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; right: 0; background: var(--ctos-red); color: black; padding: 2px 10px; font-size: 12px; font-weight: bold;">CRITICAL ANOMALY</div>
+                <h2 style="font-size: 28px; color: var(--ctos-red); margin-bottom: 10px;" class="glitch-text">WE ARE WATCHING YOU.</h2>
+                <p style="color: #94a3b8; font-size: 15px; max-width: 600px; line-height: 1.5;">
+                    DedSec has compromised node segment 0x9F4. The Central Operating System is currently cataloging system exploits. Citizens are advised to remain calm. Automation optimization algorithms are executing.
+                </p>
+            </div>
+
+            <!-- Interactive Terminal Console -->
+            <div style="background-color: var(--ctos-gray); border: 1px solid #334155; border-radius: 4px; box-shadow: inset 0 0 20px rgba(0,0,0,0.8);">
+                <!-- Terminal Title Bar -->
+                <div style="background-color: #1e293b; padding: 8px 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155;">
+                    <span style="font-size: 12px; color: #94a3b8;">ctOS_root_terminal:~//root_access</span>
+                    <div style="display: flex; gap: 6px;">
+                        <span style="width: 8px; height: 8px; background: #ef4444; border-radius: 50%;"></span>
+                        <span style="width: 8px; height: 8px; background: #eab308; border-radius: 50%;"></span>
+                        <span style="width: 8px; height: 8px; background: #22c55e; border-radius: 50%;"></span>
+                    </div>
+                </div>
+                <!-- Terminal Logs -->
+                <div id="terminal-log" style="padding: 20px; height: 300px; overflow-y: auto; font-size: 14px; line-height: 1.6; color: var(--ctos-blue);">
+                    <div>&gt; Initializing ctOS Decryption Protocols...</div>
+                    <div>&gt; Loading city grid matrix indices... <span style="color: #22c55e;">[SUCCESS]</span></div>
+                    <div>&gt; WARNING: Intrusion signature "DedSec" identified in traffic cameras.</div>
+                    <div>&gt; Type <span style="color: var(--ctos-text); font-weight: bold;">help</span> or <span style="color: var(--ctos-red); font-weight: bold;">hack</span> to initiate overriding procedures.</div>
+                </div>
+                <!-- Terminal Input Interface -->
+                <div style="display: flex; border-top: 1px solid #334155; background: #0b0f19;">
+                    <span style="padding: 12px 0 12px 20px; color: var(--ctos-red); font-weight: bold;">$</span>
+                    <input type="text" id="terminal-input" style="flex: 1; background: transparent; border: none; outline: none; padding: 12px 10px; color: var(--ctos-text); font-family: 'Share Tech Mono', monospace; font-size: 14px;" placeholder="Execute system string command..." autofocus>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Side: ctOS Profiler & Metrics -->
+        <aside style="display: flex; flex-direction: column; gap: 20px;">
+            <!-- Target Profiler Widget -->
+            <div style="border: 1px solid var(--ctos-blue); background: rgba(0, 210, 255, 0.02); padding: 20px; position: relative;">
+                <div style="position: absolute; top: -10px; left: 15px; background: var(--ctos-bg); padding: 0 8px; font-size: 12px; color: var(--ctos-blue);">PROFILER_TARGET</div>
+                
+                <div style="display: flex; gap: 15px; margin-top: 10px;">
+                    <!-- Visual Target Box with Crosshairs -->
+                    <div style="width: 80px; height: 80px; border: 1px dashed var(--ctos-blue); display: flex; align-items: center; justify-content: center; position: relative;">
+                        <div style="width: 10px; height: 10px; border: 1px solid var(--ctos-red);"></div>
+                        <div style="position: absolute; top: 0; left: 0; width: 8px; height: 8px; border-top: 2px solid var(--ctos-blue); border-left: 2px solid var(--ctos-blue);"></div>
+                        <div style="position: absolute; bottom: 0; right: 0; width: 8px; height: 8px; border-bottom: 2px solid var(--ctos-blue); border-right: 2px solid var(--ctos-blue);"></div>
+                        <span style="font-size: 9px; position: absolute; bottom: 2px; left: 2px; color: var(--ctos-blue);">SCANNING</span>
+                    </div>
+                    <!-- Meta Data -->
+                    <div style="flex: 1;">
+                        <h3 style="font-size: 18px; color: var(--ctos-text);" id="profile-name">UNKNOWN SUBJECT</h3>
+                        <p style="font-size: 13px; color: var(--ctos-blue); margin: 4px 0;" id="profile-job">Targeting Device Owner</p>
+                        <p style="font-size: 12px; color: var(--ctos-red); background: rgba(255,0,85,0.1); display: inline-block; padding: 1px 6px;" id="profile-fact">Income: Unknown</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Network Threat Metrics -->
+            <div style="border: 1px solid #334155; background: #0b0f19; padding: 20px;">
+                <h4 style="font-size: 13px; color: #64748b; margin-bottom: 15px; letter-spacing: 1px;">METRIC THREAT INDEX</h4>
+                
+                <!-- Progress bar 1 -->
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px;">
+                        <span>System Instability</span>
+                        <span id="instability-pct" style="color: var(--ctos-red);">42%</span>
+                    </div>
+                    <div style="height: 6px; background: #1e293b; width: 100%; border-radius: 3px; overflow: hidden;">
+                        <div id="instability-bar" style="height: 100%; background: var(--ctos-red); width: 42%; transition: width 0.5s ease;"></div>
+                    </div>
+                </div>
+
+                <!-- Progress bar 2 -->
+                <div>
+                    <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px;">
+                        <span>Decryption Vector Integrity</span>
+                        <span style="color: var(--ctos-blue);">89%</span>
+                    </div>
+                    <div style="height: 6px; background: #1e293b; width: 100%; border-radius: 3px; overflow: hidden;">
+                        <div style="height: 100%; background: var(--ctos-blue); width: 89%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DedSec Propaganda Box -->
+            <div style="background: black; border: 2px solid white; padding: 15px; color: white; display: flex; flex-direction: column; gap: 10px; box-shadow: 5px 5px 0px var(--ctos-red);">
+                <div style="font-family: monospace; font-weight: bold; font-size: 18px; letter-spacing: -1px; background: white; color: black; padding: 2px 5px; align-self: flex-start;">
+                    DED SEC
+                </div>
+                <p style="font-size: 12px; line-height: 1.4; color: #cbd5e1;">
+                    ctOS exposes you. It dictates your routine. We provide the counter-exploit. Take back control of your metadata infrastructure.
+                </p>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Interactive JavaScript Implementation -->
+    <script>
+        const terminalLog = document.getElementById('terminal-log');
+        const terminalInput = document.getElementById('terminal-input');
+        const instabilityPct = document.getElementById('instability-pct');
+        const instabilityBar = document.getElementById('instability-bar');
+        
+        // Profiler Data Rotator arrays
+        const names = ["Marcus Holloway", "Aiden Pearce", "Clara Lille", "Jordi Chin", "Sitara Dhawan", "Default"];
+        const jobs = ["Software Engineer", "Vigilante Fixer", "Crypto Analyst", "Contract Hitman", "Graphic Artist", "Black-Hat Rogue"];
+        const facts = ["Monitors police bands", "Carries custom baton", "Underground deck modder", "High casualty rate", "Tags corporate facilities", "Circumvents smart grids"];
+
+        // Randomize Profiler Panel every few seconds
+        function updateProfiler() {
+            const index = Math.floor(Math.random() * names.length);
+            document.getElementById('profile-name').innerText = names[index].toUpperCase();
+            document.getElementById('profile-job').innerText = jobs[index];
+            document.getElementById('profile-fact').innerText = facts[index];
+        }
+        setInterval(updateProfiler, 4000);
+        updateProfiler();
+
+        // Terminal functional handling
+        terminalInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const cmd = this.value.trim().toLowerCase();
+                if (!cmd) return;
+
+                // Log user action back to window
+                const userLine = document.createElement('div');
+                userLine.style.color = 'var(--ctos-text)';
+                userLine.innerHTML = `&gt; ${this.value}`;
+                terminalLog.appendChild(userLine);
+
+                const responseLine = document.createElement('div');
+                
+                // Command processing Logic
+                if (cmd === 'help') {
+                    responseLine.innerHTML = `Available commands: <br>
+                    - <span style="color:var(--ctos-blue)">hack</span> : Initiate targeted buffer node bypass<br>
+                    - <span style="color:var(--ctos-blue)">clear</span> : Cleanse terminal cache output<br>
+                    - <span style="color:var(--ctos-blue)">status</span> : Run ctOS diagnostics payload`;
+                } else if (cmd === 'hack') {
+                    responseLine.style.color = 'var(--ctos-red)';
+                    responseLine.innerHTML = `[CRITICAL] Injecting packet sequence... Traffic control lights hijacked. Blockade deployed. Threat levels spiking!`;
+                    // Dynamically bump the threat meter graph UI
+                    instabilityPct.innerText = "87%";
+                    instabilityBar.style.width = "87%";
+                } else if (cmd === 'clear') {
+                    terminalLog.innerHTML = '';
+                    this.value = '';
+                    return;
+                } else if (cmd === 'status') {
+                    responseLine.innerHTML = `ctOS Status // Node: Chi-Grid-09 <br> Latency: 4ms <br> Firewalls: Operational <br> Vulnerabilities exposed: 3`;
+                } else {
+                    responseLine.style.color = 'var(--ctos-red)';
+                    responseLine.innerHTML = `Command token unknown: "${cmd}". Decryption keys missing.`;
+                }
+
+                terminalLog.appendChild(responseLine);
+                this.value = '';
+                
+                // Auto Scroll to bottom layer
+                terminalLog.scrollTop = terminalLog.scrollHeight;
+            }
+        });
+    </script>
+</body>
+</html>
+```³
